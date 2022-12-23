@@ -1,0 +1,43 @@
+Results for the extraLargeArray
+insert 2.7001866 s
+append 7.7926 ms
+
+Results for the extraLargeArray
+insert 2.8997186 s
+append 6.7891 ms
+
+
+tinyArray= 
+insert1 11.7 μs
+append1 11.7 μs
+
+smallArray=
+insert2 20.2 μs
+append2 12.1 μs
+
+mediumArry=
+insert3 240.3 μs
+append3 75.3 μs
+
+largeArray=
+insert4 17.8592 ms
+append4 736.1 μs
+
+The getSizedArray function has a single loop that iterates over a range from 0 to size - 1, so it scales linearly with the input size. This means that if you double the input size, the runtime will roughly double as well.
+
+The doublerAppend and doublerInsert functions both have a single loop that iterates over an array of size nums.length. This means that the number of operations performed by these functions is directly proportional to the size of the input array. Therefore, these functions also scale linearly with the input size.
+
+If we consider the tinyArray with a size of 10, all three functions (getSizedArray, doublerAppend, and doublerInsert) will have a runtime that is roughly proportional to the size of the input array. 
+For example, if we compare the runtime of the doublerAppend function with the smallArray (size 100) and the mediumArray (size 1000), we would expect the runtime with the mediumArray to be approximately 10 times longer than the runtime with the smallArray, since the input size has increased by a factor of 10.
+
+Similarly, if we compare the runtime of the doublerAppend function with the mediumArray and the largeArray (size 10000), we would expect the runtime with the largeArray to be approximately 10 times longer than the runtime with the mediumArray, since the input size has increased by a factor of 10.
+
+5.There could be a number of reasons why a function might be slow, such as:
+
+The function performs a large number of operations: If a function performs a large number of operations, it will take longer to run than a function that performs fewer operations.
+
+The function uses inefficient algorithms: Some algorithms are more efficient than others at solving certain problems. If a function uses an inefficient algorithm, it will take longer to run than a function that uses a more efficient algorithm.
+
+The function is running on a slow machine: The speed of a function can also be affected by the hardware it is running on. If a function is running on a slow machine, it may take longer to run than it would on a faster machine.  
+
+slower functions are slow because they perform a larger number of operations, use inefficient algorithms, or are running on slow hardware.
