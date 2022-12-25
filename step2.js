@@ -10,17 +10,11 @@ function addToZero(nums) {
   }
   return false;
 }
-addToZero([]);
-// -> False
+addToZero([]);// -> False
+addToZero([1]);// -> False
+addToZero([1, 2, 3]);// -> False
+addToZero([1, 2, 3, -2]);// -> True
 
-addToZero([1]);
-// -> False
-
-addToZero([1, 2, 3]);
-// -> False
-
-addToZero([1, 2, 3, -2]);
-// -> True
 
 //runtime Complexity= O(n^2)
 //space Complexity= O(1)
@@ -35,11 +29,9 @@ function hasUniqueCharacters(word) {
   return true;
 }
 console.log(hasUniqueCharacters('hello')); // false
-hasUniqueCharacters("Monday");
-// -> True
+hasUniqueCharacters("Monday"); // -> True
+hasUniqueCharacters("Moonday");// -> False
 
-hasUniqueCharacters("Moonday");
-// -> False
 
 
 //runtime Complexity= O(n)
@@ -47,7 +39,6 @@ hasUniqueCharacters("Moonday");
 function isPangram(sentence) {
   // Convert the sentence to lowercase and remove all non-letter characters
   const cleanedSentence = sentence.toLowerCase().replace(/[^a-z]/g, '');
-
   // Create an array of booleans to keep track of the letters that have been seen
   const seenLetters = new Array(26).fill(false);
   for (let i = 0; i < cleanedSentence.length; i++) {

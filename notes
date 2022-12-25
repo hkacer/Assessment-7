@@ -1,27 +1,27 @@
 Results for the extraLargeArray
-insert 2.7001866 s
-append 7.7926 ms
+.unshift==insert 2.7001866 s
+.push==append 7.7926 ms
 
 Results for the extraLargeArray
-insert 2.8997186 s
-append 6.7891 ms
+.unshift==insert 2.8997186 s
+.push==append 6.7891 ms
 
 
 tinyArray= 
-insert1 11.7 μs
-append1 11.7 μs
+.unshift==insert1 11.7 μs
+.push==append1 11.7 μs
 
 smallArray=
-insert2 20.2 μs
-append2 12.1 μs
+.unshift==insert2 20.2 μs
+.push==append2 12.1 μs
 
 mediumArry=
-insert3 240.3 μs
-append3 75.3 μs
+.unshift==insert3 240.3 μs
+.push==append3 75.3 μs
 
 largeArray=
-insert4 17.8592 ms
-append4 736.1 μs
+.unshift==insert4 17.8592 ms
+.push==append4 736.1 μs
 
 .push's runtime was smaller than .unshift's and the ratio of their times started increasing dramatically.
 
@@ -30,6 +30,9 @@ the function that uses .unshif has a worse runtime complexity because for each n
 The getSizedArray function has a single loop that iterates over a range from 0 to size - 1, so it scales linearly with the input size. This means that if you double the input size, the runtime will roughly double as well.
 
 The doublerAppend and doublerInsert functions both have a single loop that iterates over an array of size nums.length. This means that the number of operations performed by these functions is directly proportional to the size of the input array. Therefore, these functions also scale linearly with the input size.
+
+
+Extra Credit
 
 If we consider the tinyArray with a size of 10, all three functions (getSizedArray, doublerAppend, and doublerInsert) will have a runtime that is roughly proportional to the size of the input array. 
 For example, if we compare the runtime of the doublerAppend function with the smallArray (size 100) and the mediumArray (size 1000), we would expect the runtime with the mediumArray to be approximately 10 times longer than the runtime with the smallArray, since the input size has increased by a factor of 10.
