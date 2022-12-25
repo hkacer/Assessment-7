@@ -23,6 +23,10 @@ largeArray=
 insert4 17.8592 ms
 append4 736.1 μs
 
+.push's runtime was smaller than .unshift's and the ratio of their times started increasing dramatically.
+
+the function that uses .unshif has a worse runtime complexity because for each new value inserted into the new arry the function is creating, it has to shift all the numbers already in the array, which starts becoming a lot of operations as the array gets larger. 
+
 The getSizedArray function has a single loop that iterates over a range from 0 to size - 1, so it scales linearly with the input size. This means that if you double the input size, the runtime will roughly double as well.
 
 The doublerAppend and doublerInsert functions both have a single loop that iterates over an array of size nums.length. This means that the number of operations performed by these functions is directly proportional to the size of the input array. Therefore, these functions also scale linearly with the input size.
